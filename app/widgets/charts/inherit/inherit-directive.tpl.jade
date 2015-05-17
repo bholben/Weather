@@ -1,6 +1,6 @@
 
 h4 Inherit Page's Data
 div.info This widget inherits its data from the page's scope which is a parent to all widgets.  The page uses $scope.$watch() on state variables.  If 4 state variables, then 4 watchers on the page.
-div.waiting(ng-if="!home.temps") No data yet...
-div.data(ng-repeat="temp in home.temps") {{ temp[0] | date:'ha' }} &nbsp;&nbsp; {{ temp[1] | number:0 }}&deg;F
+div.waiting(ng-if="!home.descrips") No data yet...
+div.data(ng-repeat="descrip in home.descrips") {{ descrip[0] | date:'ha' }} &nbsp;&nbsp; {{ descrip[1] }}
 

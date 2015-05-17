@@ -4,7 +4,6 @@ angular.module 'data'
   constructor: (DataCache, ApiWeather) ->
 
     @city = ApiWeather.cities[0].name
-    console.debug @city
     @setCity = (city) ->
       @city = city
       update()

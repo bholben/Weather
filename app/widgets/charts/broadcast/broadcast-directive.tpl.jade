@@ -1,6 +1,6 @@
 
 h4 Broadcast a Notification
 div.info This widget uses Angular's built-in pub/sub system with $rootScope.$broadcast() and $scope.$on().  If 4 subscriptions and 4 widgets, then 16 watchers on the page.
-div.waiting(ng-if="!broadcast.temps") No data yet...
-div.data(ng-repeat="temp in broadcast.temps") {{ temp[0] | date:'ha' }} &nbsp;&nbsp; {{ temp[1] | number:0 }}&deg;F
+div.waiting(ng-if="!broadcast.pressures") No data yet...
+div.data(ng-repeat="pressure in broadcast.pressures") {{ pressure[0] | date:'ha' }} &nbsp;&nbsp; {{ pressure[1] | number:0 }} millibars
 
