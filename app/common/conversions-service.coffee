@@ -2,7 +2,9 @@
 angular.module 'common'
 .service 'Conversions', class Conversions
 
-  constructor: ->
+  constructor: ($filter) ->
 
     @kelvinToFarenheit = (kelvin) -> (kelvin - 273.15) * 9 / 5 + 32
+
+    @epochTimeToAmPm = (epochTime) -> $filter('date')(epochTime, 'ha')
 

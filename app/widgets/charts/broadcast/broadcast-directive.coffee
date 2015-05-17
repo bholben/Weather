@@ -19,3 +19,7 @@ angular.module 'widgets'
     $scope.$on 'destroy', pressuresWatcher
     $scope.$on 'destroy', humiditiesWatcher
 
+
+    @labels = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales']
+    @data = [300, 500, 100]
+

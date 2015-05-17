@@ -4,3 +4,4 @@ div.info This widget uses $scope.$watch() in its own scope.  If 4 state variable
 div.waiting(ng-if="!watch.humidities") No data yet...
 div.data(ng-repeat="humidity in watch.humidities") {{ humidity[0] | date:'ha' }} &nbsp;&nbsp; {{ humidity[1] | number:0 }}%
 
+nvd3(options="watch.options" data="watch.data")

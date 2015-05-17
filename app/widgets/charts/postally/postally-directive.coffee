@@ -7,9 +7,13 @@ angular.module 'widgets'
 
 
 .controller 'PostallyCtrl', class PostallyCtrl
-  constructor: ($scope, DataCache) ->
+  constructor: ($scope, $filter, DataCache) ->
     tempsWatcher = $scope.$on 'temperatures updated', (event, data) =>
       @temps = data
+      @labels = data.map (d) -> $filter('date')(d[0], 'ha')
+      @series = ['Series A']
+      @data = [data.map (d) -> d[1]]
+
     pressuresWatcher = $scope.$on 'pressures updated', (event, data) =>
       @pressures = data
     humiditiesWatcher = $scope.$on 'humidities updated', (event, data) =>

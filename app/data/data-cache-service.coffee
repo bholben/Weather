@@ -22,7 +22,6 @@ angular.module 'data'
       $rootScope.$broadcast 'descriptions updated'
 
     @update = (obj) ->
-      console.debug 'obj: ', obj
       cityWeather = ApiWeather.url(obj.city)
       $http.get(cityWeather).then (res) -> cacheTemperatures res
       # Simulate hitting different endpoints...
