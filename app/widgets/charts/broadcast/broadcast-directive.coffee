@@ -7,19 +7,12 @@ angular.module 'widgets'
 
 
 .controller 'BroadcastCtrl', class BroadcastCtrl
-  constructor: ($scope, DataCache) ->
-    tempsWatcher = $scope.$on 'temperatures updated', =>
-      @temps = DataCache.temps
+  constructor: ($scope, DataCache, PressureChart) ->
+
+    # Get data and options for the pressure chart.
     pressuresWatcher = $scope.$on 'pressures updated', =>
-      @pressures = DataCache.pressures
-    humiditiesWatcher = $scope.$on 'humidities updated', =>
-      @humidities = DataCache.humidities
+      @data = [values: DataCache.pressures]
+    @options = PressureChart.options
 
-    $scope.$on 'destroy', tempsWatcher
     $scope.$on 'destroy', pressuresWatcher
-    $scope.$on 'destroy', humiditiesWatcher
-
-
-    @labels = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales']
-    @data = [300, 500, 100]
 

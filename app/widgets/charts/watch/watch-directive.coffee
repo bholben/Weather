@@ -7,15 +7,9 @@ angular.module 'widgets'
 
 
 .controller 'WatchCtrl', class WatchCtrl
-  constructor: ($scope, Watch, DataCache, Conversions) ->
+  constructor: ($scope, Watch, DataCache) ->
 
-    convertTime = Conversions.epochTimeToAmPm
-
-    $scope.$watch (-> DataCache.temps), (t) => @temps = t
-    $scope.$watch (-> DataCache.descrips), (d) => @descrips = d
-
-    $scope.$watch (-> DataCache.humidities), (h) =>
-      values = h and h.map (d) -> {label: convertTime(d[0]), value: d[1]}
-      @data = [values: values]
-      @options = Watch.options
+    # Get data and options for the humidity chart.
+    $scope.$watch (-> DataCache.humidities), (h) => @data = [values: h]
+    @options = Watch.options
 

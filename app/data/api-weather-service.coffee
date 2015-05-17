@@ -8,15 +8,17 @@ angular.module 'data'
     @appId = '277d48f0b68fea15a56528f74ea33b2d'
 
     @cities = [
-      {name: 'Atlanta',           id: 4180439}
-      {name: 'Boston',            id: 4930956}
-      {name: 'Washington, D.C.',  id: 4140963}
-      {name: 'West Palm Beach',   id: 4177887}
+      {name: 'Atlanta, GA',         id: 4180439}
+      {name: 'Boston, MA',          id: 4930956}
+      (name: 'Portland, ME',        id: 4975802)
+      {name: 'Washington, D.C.',    id: 4140963}
+      {name: 'West Palm Beach, FL', id: 4177887}
+      {name: 'Wilmington, NC',      id: 4499379}
     ]
 
     @ranges = [
-      {name: '9-hour',  id:  9}
-      {name: '18-hour', id: 18}
+      {name: '12-hour'}
+      {name: '24-hour'}
     ]
 
     @url = (city) ->

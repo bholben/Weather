@@ -1,6 +1,6 @@
 
 angular.module 'widgets'
-.service 'Watch', class Watch
+.service 'TemperatureChart', class TemperatureChart
 
   constructor: ->
 
@@ -22,6 +22,6 @@ angular.module 'widgets'
           rotateLabels: -60
         title:
           enable: true
-          text: 'Humidity'
+          text: 'Temperatures'
           class: 'h4'
 
