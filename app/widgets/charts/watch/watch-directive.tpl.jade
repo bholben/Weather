@@ -1,0 +1,6 @@
+
+h4 $scope.$watch()
+div.info This widget uses $scope.$watch() in its own scope.  If 4 state variables and 4 widgets, then 16 watchers on the page.
+div.waiting(ng-if="!watch.temps") No data yet...
+div.data(ng-repeat="temp in watch.temps") {{ temp[0] | date:'ha' }} &nbsp;&nbsp; {{ temp[1] | number:0 }}&deg;F
+

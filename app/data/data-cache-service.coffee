@@ -1,20 +1,35 @@
 
 angular.module 'data'
 .service 'DataCache', class DataCache
-  constructor: ($timeout, $http, $q, $rootScope, ApiWeather) ->
+  constructor: ($http, $q, $rootScope, ApiWeather, Conversions) ->
+
+    logs = => console.debug 'DataCache.temps: ', @temps
+
+    toF = Conversions.kelvinToFarenheit
+
+    cacheTemperatures = (res) =>
+      @temps = res.data.list.map (d) -> [1000 * d.dt, toF(d.main.temp)]
+      $rootScope.$broadcast 'temperatures updated'
+      logs()
+
+    cachePressures = (res) ->
+      @pressures = res.data.list.map (d) -> [1000 * d.dt, d.main.pressure]
+      $rootScope.$broadcast 'pressures updated'
+
+    cacheHumidities = (res) ->
+      @humidities = res.data.list.map (d) -> [1000 * d.dt, d.main.humidity]
+      $rootScope.$broadcast 'humidities updated'
+
+    cacheDescriptions = (res) ->
+      @descrips = res.data.list.map (d) -> [1000 * d.dt, d.weather.description]
+      $rootScope.$broadcast 'descriptions updated'
+
     @update = (obj) ->
-      if obj.hasOwnProperty 'lake' or obj.hasOwnProperty 'river'
-        dataType = '/forecast'
-        dataType = '/weather'
-        city = '/city?id=' + ApiWeather.cityId.ATLANTA
-        city = '?id=' + ApiWeather.cityId.ATLANTA
-        appId = '&APPID=' + ApiWeather.appId
-        url = ApiWeather.URL + dataType + city + appId
-        $http.get(url).then (data) -> console.dir data
-        $timeout (-> freshWaterApi obj), 2000
-      if obj.hasOwnProperty 'ocean'
-        $timeout (-> saltWaterApi obj), 2000
-    freshWaterApi = (obj) =>
-      @freshWater = obj.lake.length
-      $rootScope.$broadcast 'fresh water updated'
+      console.debug 'obj: ', obj
+      cityWeather = ApiWeather.url(obj.city)
+      $http.get(cityWeather).then (res) -> cacheTemperatures res
+      # Simulate hitting different endpoints...
+      $http.get(cityWeather).then (res) -> cachePressures res
+      $http.get(cityWeather).then (res) -> cacheHumidities res
+      $http.get(cityWeather).then (res) -> cacheDescriptions res
 

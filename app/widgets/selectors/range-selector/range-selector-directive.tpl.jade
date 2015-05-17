@@ -1,0 +1,5 @@
+
+select.form-control(ng-options="range for range in range.ranges"
+                    ng-model="range.selected"
+                    ng-change="range.change(range.selected)")
+

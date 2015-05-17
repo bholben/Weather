@@ -1,0 +1,5 @@
+
+select.form-control(ng-options="city for city in city.cities"
+                    ng-model="city.selected"
+                    ng-change="city.change(city.selected)")
+

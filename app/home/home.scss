@@ -3,11 +3,11 @@ body {
   background-color: #e8e8e8;
 }
 
-.col-sm-3 {
+.card {
   height: 450px;
   border: 1px solid #bbb;
   margin-top: 20px;
-  padding-top: 50px;
+  padding-top: 20px;
   text-align: center;
   background-color: white;
 }
@@ -21,8 +21,6 @@ body {
 }
 
 .data {
-  margin-top: 50px;
-  font-size: 60px;
   color: orange;
 }
 
@@ -30,3 +28,4 @@ body {
   font-size: 10px;
   color: #777;
 }
+

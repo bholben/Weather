@@ -1,16 +1,16 @@
 ###global describe, beforeEach, it, expect, inject, module###
 'use strict'
 
-describe 'lakeSelector', ->
+describe 'inherit', ->
   scope = undefined
   element = undefined
 
-  beforeEach module('ctrlComm', '/lake-selector-directive.tpl.html')
+  beforeEach module('widgets', 'widgets/charts/inherit/inherit-directive.tpl.html')
 
   beforeEach inject ($compile, $rootScope) ->
     scope = $rootScope.$new()
-    element = $compile(angular.element('<lakeSelector></lakeSelector>')) scope
+    element = $compile(angular.element('<inherit></inherit>')) scope
 
   it 'should have correct text', ->
     scope.$apply()
-    expect(element.isolateScope().lakeSelector.name).to.equal 'lakeSelector'
+    expect(element.isolateScope().inherit.name).to.equal 'inherit'

@@ -4,8 +4,7 @@ angular.module 'ctrlComm'
   $routeProvider
   .when '/home',
     templateUrl: 'home/home.tpl.html'
-    controller: 'HomeCtrl'
-    controllerAs: 'home'
+    controller: 'HomeCtrl as home'
   .otherwise
     redirectTo: '/home'
 

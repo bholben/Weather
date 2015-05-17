@@ -1,3 +1,8 @@
 
-angular.module 'data', []
+angular.module 'data', [
+
+  # Common modules - not app-specific
+  'common'
+
+]
 

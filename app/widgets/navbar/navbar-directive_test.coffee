@@ -1,16 +1,16 @@
 ###global describe, beforeEach, it, expect, inject, module###
 'use strict'
 
-describe 'inherit', ->
+describe 'navbar', ->
   scope = undefined
   element = undefined
 
-  beforeEach module('home', 'home/inherit-directive.tpl.html')
+  beforeEach module('widgets', 'widgets/navbar/navbar-directive.tpl.html')
 
   beforeEach inject ($compile, $rootScope) ->
     scope = $rootScope.$new()
-    element = $compile(angular.element('<inherit></inherit>')) scope
+    element = $compile(angular.element('<navbar></navbar>')) scope
 
   it 'should have correct text', ->
     scope.$apply()
-    expect(element.isolateScope().inherit.name).to.equal 'inherit'
+    expect(element.isolateScope().navbar.name).to.equal 'navbar'
