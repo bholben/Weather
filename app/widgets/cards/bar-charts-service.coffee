@@ -20,10 +20,4 @@ angular.module 'cards'
         transitionDuration: 500
         xAxis:
           rotateLabels: -60
-        yAxis:
-          range: [0, 2]
-        title:
-          enable: true
-          text: 'My Chart'
-          class: 'h4'
 

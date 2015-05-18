@@ -5,5 +5,4 @@ angular.module 'cards'
   constructor: (BarCharts) ->
 
     @options = BarCharts.options
-    @options.chart.title.text = 'Temperatures'
 
