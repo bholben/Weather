@@ -1,12 +1,12 @@
 
-angular.module 'widgets'
-.directive 'broadcast', ->
+angular.module 'cards'
+.directive 'pressure', ->
   restrict: 'E'
-  templateUrl: 'widgets/charts/broadcast/broadcast-directive.tpl.html'
-  controller: 'BroadcastCtrl as broadcast'
+  templateUrl: 'widgets/cards/pressure/pressure-directive.tpl.html'
+  controller: 'PressuretCtrl as pressure'
 
 
-.controller 'BroadcastCtrl', class BroadcastCtrl
+.controller 'PressuretCtrl', class PressuretCtrl
   constructor: ($scope, DataCache, PressureChart) ->
 
     # Get data and options for the pressure chart.

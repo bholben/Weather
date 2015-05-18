@@ -38,13 +38,13 @@ angular.module 'data'
       $rootScope.$broadcast 'descriptions updated'
 
 
-    @update = (obj) ->
+    @update = (obj, caller) ->
       @count = if obj.range is '12-hour' then 4 else 8
       cityWeather = ApiWeather.url(obj.city)
-      $http.get(cityWeather).then (res) -> cacheTemperatures res
       # Simulate hitting multiple endpoints
-      # (actually using the same endpoint 3 more times here)...
-      $http.get(cityWeather).then (res) -> cachePressures res
-      $http.get(cityWeather).then (res) -> cacheHumidities res
+      # (actually using the same endpoint 4 times here)...
       $http.get(cityWeather).then (res) -> cacheDescriptions res
+      $http.get(cityWeather).then (res) -> cacheHumidities res
+      $http.get(cityWeather).then (res) -> cachePressures res
+      $http.get(cityWeather).then (res) -> cacheTemperatures res
 

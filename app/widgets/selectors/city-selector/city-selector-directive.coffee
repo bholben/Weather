@@ -1,5 +1,5 @@
 
-angular.module 'widgets'
+angular.module 'selectors'
 .directive 'citySelector', ->
   restrict: 'E'
   templateUrl: 'widgets/selectors/city-selector/city-selector-directive.tpl.html'

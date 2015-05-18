@@ -5,7 +5,7 @@ describe 'citySelector', ->
   scope = undefined
   element = undefined
 
-  beforeEach module('widgets', 'widgets/selectors/city-selector/city-selector-directive.tpl.html')
+  beforeEach module('selectors', 'widgets/selectors/city-selector/city-selector-directive.tpl.html')
 
   beforeEach inject ($compile, $rootScope) ->
     scope = $rootScope.$new()

@@ -1,12 +1,12 @@
 
-angular.module 'widgets'
-.directive 'postally', ->
+angular.module 'cards'
+.directive 'temperature', ->
   restrict: 'E'
-  templateUrl: 'widgets/charts/postally/postally-directive.tpl.html'
-  controller: 'PostallyCtrl as postally'
+  templateUrl: 'widgets/cards/temperature/temperature-directive.tpl.html'
+  controller: 'TemperatureCtrl as temperature'
 
 
-.controller 'PostallyCtrl', class PostallyCtrl
+.controller 'TemperatureCtrl', class TemperatureCtrl
   constructor: ($scope, TemperatureChart) ->
 
     # Get data and options for the temperature chart.

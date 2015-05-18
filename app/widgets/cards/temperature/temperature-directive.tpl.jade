@@ -1,6 +1,7 @@
 
+h2 Temperatures
 h4 Broadcast Data
 div.info This widget uses Angular's built-in pub/sub system with $rootScope.$broadcast() and $scope.$on().  If 4 subscriptions and 4 widgets, then 16 watchers on the page.
-div.waiting(ng-if="!postally.data") No data yet...
-nvd3(options="postally.options" data="postally.data")
+div.waiting(ng-if="!temperature.data") No data yet...
+nvd3(options="temperature.options" data="temperature.data")
 

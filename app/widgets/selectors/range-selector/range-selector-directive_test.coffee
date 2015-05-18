@@ -5,7 +5,7 @@ describe 'rangeSelector', ->
   scope = undefined
   element = undefined
 
-  beforeEach module('widgets', 'widgets/range-selector-directive.tpl.html')
+  beforeEach module('selectors', 'widgets/range-selector-directive.tpl.html')
 
   beforeEach inject ($compile, $rootScope) ->
     scope = $rootScope.$new()

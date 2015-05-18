@@ -6,12 +6,15 @@ angular.module 'data'
     @city = ApiWeather.cities[0].name
     @setCity = (city) ->
       @city = city
-      update()
+      update('city')
 
     @range = ApiWeather.ranges[0].name
     @setRange = (range) ->
       @range = range
-      update()
+      update('range')
 
-    update = => DataCache.update {city: @city, range: @range}
+    update = (caller) =>
+      DataCache.update {city: @city, range: @range}, caller
+
+    update()
 

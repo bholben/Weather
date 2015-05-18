@@ -1,5 +1,5 @@
 
-angular.module 'widgets'
+angular.module 'selectors'
 .directive 'rangeSelector', ->
   restrict: 'E'
   templateUrl: 'widgets/selectors/range-selector/range-selector-directive.tpl.html'
