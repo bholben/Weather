@@ -41,7 +41,7 @@ angular.module 'data'
     @update = (obj, caller) ->
       @count = if obj.range is '12-hour' then 4 else 8
       cityWeather = ApiWeather.url(obj.city)
-      # Simulate hitting multiple endpoints
+      # Simulate hitting multiple endpoints with every state change
       # (actually using the same endpoint 4 times here)...
       $http.get(cityWeather).then (res) -> cacheDescriptions res
       $http.get(cityWeather).then (res) -> cacheHumidities res

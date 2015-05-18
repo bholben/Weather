@@ -4,7 +4,7 @@
 describe 'HomeCtrl', ->
   ctrl = undefined
 
-  beforeEach module 'home'
+  beforeEach module 'pages'
 
   beforeEach inject ($rootScope, $controller) ->
     ctrl = $controller 'HomeCtrl'

@@ -1,5 +1,5 @@
 
-angular.module 'home'
+angular.module 'pages'
 .controller 'HomeCtrl', class HomeCtrl
   constructor: ($scope, DataCache) ->
     $scope.$watch (-> DataCache.temps), (t) => @temps = t
