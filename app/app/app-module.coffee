@@ -1,5 +1,5 @@
 
-angular.module 'ctrlComm', [
+angular.module 'weather', [
 
   # Angular modules
   'ngRoute'

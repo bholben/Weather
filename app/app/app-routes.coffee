@@ -1,5 +1,5 @@
 
-angular.module 'ctrlComm'
+angular.module 'weather'
 .config ($routeProvider) ->
   $routeProvider
   .when '/home',
