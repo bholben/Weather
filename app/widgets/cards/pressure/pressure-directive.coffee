@@ -7,6 +7,7 @@ angular.module 'cards'
 
 
 .controller 'PressuretCtrl', class PressuretCtrl
+
   constructor: ($scope, DataCache, PressureChart) ->
 
     # Get data and options for the pressure chart.

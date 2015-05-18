@@ -7,6 +7,7 @@ angular.module 'cards'
 
 
 .controller 'HumidityCtrl', class HumidityCtrl
+
   constructor: ($scope, HumidityChart, DataCache) ->
 
     # Get data and options for the humidity chart.

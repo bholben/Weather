@@ -7,6 +7,7 @@ angular.module 'cards'
 
 
 .controller 'TemperatureCtrl', class TemperatureCtrl
+
   constructor: ($scope, TemperatureChart) ->
 
     # Get data and options for the temperature chart.
