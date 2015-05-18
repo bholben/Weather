@@ -3,6 +3,7 @@ angular.module 'data'
 .service 'ApiWeather', class ApiWeather
 
   constructor: (_) ->
+
     URL = 'http://api.openweathermap.org/data/2.5'
 
     appId = '277d48f0b68fea15a56528f74ea33b2d'

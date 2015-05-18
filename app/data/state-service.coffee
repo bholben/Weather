@@ -1,6 +1,7 @@
 
 angular.module 'data'
 .service 'State', class State
+
   constructor: (DataCache, ApiWeather) ->
 
     @city = ApiWeather.cities[0].name
@@ -8,7 +9,7 @@ angular.module 'data'
       @city = city
       update('city')
 
-    @range = ApiWeather.ranges[0].name
+    @range = ApiWeather.ranges[1].name
     @setRange = (range) ->
       @range = range
       update('range')

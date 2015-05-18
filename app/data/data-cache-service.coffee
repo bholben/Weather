@@ -1,6 +1,7 @@
 
 angular.module 'data'
 .service 'DataCache', class DataCache
+
   constructor: ($http, $q, $rootScope, ApiWeather, Conversions) ->
 
     toF = Conversions.kelvinToFarenheit
