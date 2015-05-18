@@ -1,4 +1,4 @@
-# ctrl-comm
+# Weather
 
 *Generated with [ng-poly](https://github.com/dustinspecker/generator-ng-poly/tree/v0.8.5) version 0.8.5*
 

@@ -3,9 +3,9 @@ angular.module 'data'
 .service 'ApiWeather', class ApiWeather
 
   constructor: (_) ->
-    @URL = 'http://api.openweathermap.org/data/2.5'
+    URL = 'http://api.openweathermap.org/data/2.5'
 
-    @appId = '277d48f0b68fea15a56528f74ea33b2d'
+    appId = '277d48f0b68fea15a56528f74ea33b2d'
 
     @cities = [
       {name: 'Atlanta, GA',         id: 4180439}
@@ -24,6 +24,6 @@ angular.module 'data'
     @url = (city) ->
       dataType = '/forecast/city'
       city = '?id=' + _.findWhere(@cities, {name: city}).id
-      appId = '&APPID=' + @appId
-      @URL + dataType + city + appId
+      appId = '&APPID=' + appId
+      URL + dataType + city + appId
 
