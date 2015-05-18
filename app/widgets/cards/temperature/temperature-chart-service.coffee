@@ -2,8 +2,8 @@
 angular.module 'cards'
 .service 'TemperatureChart', class TemperatureChart
 
-  constructor: (Cards) ->
+  constructor: (BarCharts) ->
 
-    @options = Cards.options
+    @options = BarCharts.options
     @options.chart.title.text = 'Temperatures'
 
