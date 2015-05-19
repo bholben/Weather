@@ -9,6 +9,6 @@
     "style": "scss",
     "testFramework": "mocha",
     "testScript": "coffee",
-    "lastUsedModule": "pages"
+    "lastUsedModule": "common"
   }
 }
