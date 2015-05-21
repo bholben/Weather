@@ -15,7 +15,7 @@ Some observations:
 
 - Attaching anything to $rootScope is not a good practice.  Alternate approaches should be used wherever possible.
 - When creating $on handlers, it is important to destroy these event watchers as these will introduce memory leaks which will limit the user's ability to stay in the app for an extended period of time.
-- $scope.$watch does not need a destroy routine.  Angular handles this automatically.
+- $scope.$watch does not need a destroy routine.  Angular handles this automatically (per [this Stack Overflow post](http://stackoverflow.com/a/25114028/3465372)).
 
 ### Conclusion
 

@@ -6,9 +6,9 @@ angular.module 'common'
 
     store = $window.localStorage
 
-    @set: (key, val) -> store?.setItem key, angular.toJson val
+    @set = (key, val) -> store?.setItem key, angular.toJson val
 
-    @get: (key) -> angular.fromJson store?.getItem key
+    @get = (key) -> angular.fromJson store?.getItem key
 
-    @clear: -> store.clear()
+    @clear = -> store.clear()
 
