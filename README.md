@@ -48,6 +48,9 @@ Here are some resources that recommend we shy away from the use of a pure broadc
 
   - "The Top 5 Mistakes AngularJS Developers" - One of them is ["Overusing $broadcast and $emit"](http://csharperimage.jeremylikness.com/2014/12/the-top-5-mistakes-angularjs-developers.html) - **Jeremy Likness**
 
+  - From **Nathan LeClaire's** "[5 AngularJS Antipatterns & Pitfalls](http://nathanleclaire.com/blog/2014/04/19/5-angularjs-antipatterns-and-pitfalls/)" blog post... "#3. Extreme overuse of event broadcasting and listening ($emit, $broadcast, $on):  I really feel that you should keep manual event broadcasting and catching out of your code if possible. It doesn’t usually do a whole lot of good and confuses the hell out of the people who have to maintain your code (including you!). The problem is thus: Let’s say you have something going wacky in a $scope.$on. You set a breakpoint in the defined callback function that runs when that $scope.$on catches its defined event. OK, now what? Perhaps you look to see where the event was thrown from. With constrained eventing, debugging shouldn’t be a problem, but if you or your team lets their discipline slip into event spaghetti you’re in for a world of pain. Usually this can be avoided by careful use of services and proper scope inheritance."
+  []
+
   - "$broadcast is evil", per [this blog post](http://crudbetter.com/angular-share-data-between-controllers/) - **Mike Godfrey**
 
 ---
